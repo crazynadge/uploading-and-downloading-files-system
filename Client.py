@@ -6,7 +6,7 @@ def client_program():
     client_socket.connect(("127.0.0.1", 2000))
     ask = True    
     while ask:
-        action = input("enter download for downloading, upload for uploading or stop for stoping networking\n")#why I can't input here
+        action = input("enter download for downloading, upload for uploading or stop for stoping networking\n")
         client_socket.send(action.encode())
         if(action == "upload"):
             
@@ -36,6 +36,7 @@ def client_program():
             print("we got the file")
 
 
+        
         elif(action == "stop"):
             ask = False
 if __name__ == '__main__':

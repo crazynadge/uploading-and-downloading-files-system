@@ -33,7 +33,7 @@ def server_program():
                 filesize = os.path.getsize(filename)
                 client.send(str(filesize).encode())
                 file = open(filename, "rb")
-                data = file.read()#the read func doesn't work
+                data = file.read()
                 client.sendall(data)
                 file.close()
                 print("sent")
